@@ -8,13 +8,24 @@
   --text-muted: #8A7B7E;
   --bg-card: rgba(255, 255, 255, 0.7);
   --border-color: rgba(255, 255, 255, 0.5);
-  
+
   --font-main: 'Outfit', system-ui, -apple-system, sans-serif;
-  
+
   --shadow-sm: 0 4px 6px rgba(89, 74, 78, 0.05);
   --shadow-md: 0 10px 15px rgba(89, 74, 78, 0.08);
   --shadow-lg: 0 20px 25px rgba(89, 74, 78, 0.1);
   --shadow-glass: 0 8px 32px 0 rgba(255, 203, 164, 0.2);
+}
+
+* {
+  min-width: 0;
+  /* prevents flex/grid children from forcing overflow */
+}
+
+html,
+body {
+  overflow-x: hidden;
+  /* safety net against horizontal scroll on mobile */
 }
 
 body {
@@ -23,11 +34,9 @@ body {
   font-family: var(--font-main);
   color: var(--text-dark);
   background: linear-gradient(135deg, var(--pastel-yellow) 0%, var(--peach) 50%, var(--blush-pink) 100%);
-  background-attachment: fixed;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100dvh;
+  /* accounts for mobile browser chrome, falls back gracefully */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -35,8 +44,12 @@ body {
 #root {
   width: 100%;
   max-width: 800px;
+  margin: 0 auto;
+  /* centers horizontally without flex-centering the whole body */
   padding: 2rem;
   box-sizing: border-box;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 @media (max-width: 600px) {
@@ -45,17 +58,19 @@ body {
     padding-bottom: max(2rem, env(safe-area-inset-bottom));
     padding-top: max(1rem, env(safe-area-inset-top));
   }
-  
+
   .glass-panel {
     padding: 1.5rem;
   }
-  
+
   .header-title {
     font-size: 2rem;
   }
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 600;
   margin-top: 0;
 }
@@ -68,6 +83,12 @@ button {
   transition: all 0.3s ease;
 }
 
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Glassmorphism Utilities */
 .glass-panel {
   background: var(--bg-card);
@@ -77,6 +98,8 @@ button {
   border-radius: 24px;
   padding: 2.5rem;
   box-shadow: var(--shadow-glass);
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 /* Animations */
@@ -85,6 +108,7 @@ button {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -102,6 +126,8 @@ button {
   gap: 2rem;
   align-items: center;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header-title {

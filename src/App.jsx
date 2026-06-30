@@ -32,7 +32,7 @@ function App() {
         <p className="header-subtitle" style={{ margin: 0 }}>Your pocket companion for introverted moments.</p>
       </header>
 
-      <nav className="nav-pill animate-fade-in-up" style={{ animationDelay: '0.1s', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <nav className="nav-pill animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
         {tabs.map((tab) => (
           <button
             key={tab.id}

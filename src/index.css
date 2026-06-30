@@ -42,7 +42,16 @@ body {
 @media (max-width: 600px) {
   #root {
     padding: 1rem;
-    padding-bottom: 5rem; /* Space for bottom nav */
+    padding-bottom: max(2rem, env(safe-area-inset-bottom));
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+  
+  .glass-panel {
+    padding: 1.5rem;
+  }
+  
+  .header-title {
+    font-size: 2rem;
   }
 }
 

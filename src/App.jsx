@@ -8,6 +8,7 @@ import SocialBuffer from './components/SocialBuffer';
 import DryRun from './components/DryRun';
 import ThoughtCheck from './components/ThoughtCheck';
 import { Sparkles, Focus, Home, MessagesSquare, Bot, PlaySquare, BrainCircuit } from 'lucide-react';
+import logo from './assets/logo.png';
 import './App.css'; // Add a new CSS file for App specific styles
 
 function App() {
@@ -25,9 +26,10 @@ function App() {
 
   return (
     <div className="app-container">
-      <header className="animate-fade-in-up" style={{ animationDelay: '0s' }}>
-        <h1 className="header-title">Gentle Push</h1>
-        <p className="header-subtitle">Your pocket companion for introverted moments.</p>
+      <header className="animate-fade-in-up" style={{ animationDelay: '0s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+        <img src={logo} alt="Gentle Push Logo" style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }} />
+        <h1 className="header-title" style={{ margin: 0 }}>Gentle Push</h1>
+        <p className="header-subtitle" style={{ margin: 0 }}>Your pocket companion for introverted moments.</p>
       </header>
 
       <nav className="nav-pill animate-fade-in-up" style={{ animationDelay: '0.1s', flexWrap: 'wrap', justifyContent: 'center' }}>

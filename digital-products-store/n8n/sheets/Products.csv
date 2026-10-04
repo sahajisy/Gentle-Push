@@ -1,0 +1,2 @@
+sku,title,category,price,currency,description,image_url,stripe_payment_link_id,stripe_payment_link_url,supplier_download_url,license_note,active
+SAMPLE-001,Sample Notion Planner Template,Templates,19,USD,,,plink_REPLACE,https://buy.stripe.com/REPLACE,https://supplier.example.com/private/download/sample-001,Personal use,TRUE

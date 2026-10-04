@@ -1,0 +1,27 @@
+{
+  "_note": "SAMPLE DATA. This file is overwritten by the n8n '03 - Catalog Sync' workflow from your Google Sheet. Never put supplier download URLs here.",
+  "products": [
+    {
+      "sku": "SAMPLE-001",
+      "title": "Sample Notion Planner Template",
+      "category": "Templates",
+      "price": 19,
+      "currency": "USD",
+      "description": "A sample listing. Replace by adding rows to your Products sheet.",
+      "image": "",
+      "checkoutUrl": "",
+      "license": "Personal use"
+    },
+    {
+      "sku": "SAMPLE-002",
+      "title": "Sample Productivity Ebook",
+      "category": "Ebooks",
+      "price": 12,
+      "currency": "USD",
+      "description": "A sample listing. Add a Stripe Payment Link to enable the Buy button.",
+      "image": "",
+      "checkoutUrl": "",
+      "license": "Personal use"
+    }
+  ]
+}

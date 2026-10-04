@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Products Store</title>
+  <meta name="description" content="Instant-download digital products: templates, ebooks and toolkits.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/" id="brand">Digital Products Store</a>
+    <nav><a href="#catalog">Shop</a><a href="policies.html">Policies</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Download it. Use it today.</h1>
+      <p>Templates, ebooks and toolkits delivered to your inbox seconds after checkout.</p>
+      <a class="btn" href="#catalog">Browse products</a>
+    </section>
+
+    <section id="catalog" class="wrap" aria-live="polite">
+      <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+      <div class="grid" id="grid"><p class="muted">Loading products…</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Instant digital delivery &middot; Secure checkout by Stripe &middot; <a href="policies.html">Refund &amp; license policy</a></p>
+  </footer>
+
+  <button id="chat-toggle" class="chat-toggle" aria-label="Chat with our assistant" hidden>Chat</button>
+  <section id="chat" class="chat" aria-label="Sales assistant" hidden>
+    <div class="chat-log" id="chat-log" role="log"></div>
+    <form id="chat-form" autocomplete="off">
+      <input id="chat-input" type="text" maxlength="1000" placeholder="Ask about a product…" aria-label="Message" required>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

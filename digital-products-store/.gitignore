@@ -1,0 +1,7 @@
+node_modules
+.env
+.env.*
+!.env.example
+.DS_Store
+# n8n exports can embed credentials; only commit sanitized copies in n8n/workflows
+*.credentials.json

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { User, Bot, Send, Loader2, PlaySquare } from 'lucide-react';
+import { Send, Loader2, PlaySquare } from 'lucide-react';
 import { generateAIResponse } from '../utils/ai';
 import './NudgeCard.css';
 
